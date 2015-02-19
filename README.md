@@ -1,0 +1,2 @@
+# strataApp
+Strata Managment App
