@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 	// This code only runs on the client
 	Meteor.subscribe('tasks');
 
-	Template.body.helpers({
+	Template.todo.helpers({
 		tasks: function() {
 			if (Session.get('hideCompleted')) {
 				// If hide completed is checked, filter tasks
@@ -43,7 +43,7 @@ if (Meteor.isClient) {
 
 	});
 
-	Template.body.events({
+	Template.todo.events({
 		'submit .new-task': function(event) {
 			// This function is called when the new task form is submitted
 
@@ -107,7 +107,7 @@ Meteor.methods({
 	deleteTask: function(taskId) {
 
 		var task = Tasks.findOne(taskId);
-		if (task.private && task.owner !== Meteor.userId()) {
+		if ((task.private && task.owner !== Meteor.userId()) || task.owner !== Meteor.userId() ) {
 			// If the task is private, make sure only the owner can delete it
 			throw new Meteor.Error('not-authorized');
 		} else {

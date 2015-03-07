@@ -11,3 +11,4 @@ accounts-google
 accounts-facebook
 twbs:bootstrap
 fourseven:scss
+iron:router
