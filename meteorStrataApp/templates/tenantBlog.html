@@ -1,0 +1,21 @@
+<template name="tenantBlog">
+	<div class="tenantBlog">
+
+		<h2>Blog Post ({{postCount}})</h2>
+
+
+
+		<!-- add a form below the h1 -->
+		{{#if currentUser}}
+		Add a Blog Post
+		<form class="new-task">
+			<input type="textarea" name="text" placeholder="Type to add new tasks" />
+		</form>
+		{{/if}}
+
+	</div>
+
+	<ul>
+		{{#each blogPosts}} {{> post}} {{/each}}
+	</ul>
+</template>
