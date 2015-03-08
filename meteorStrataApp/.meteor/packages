@@ -12,3 +12,6 @@ accounts-facebook
 twbs:bootstrap
 fourseven:scss
 iron:router
+xolvio:cucumber
+velocity:html-reporter
+xolvio:webdriver
