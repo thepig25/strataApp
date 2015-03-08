@@ -1,8 +1,15 @@
-.container {
+.container-fluid {
 	.todo, .tenantBlog {
 		margin-top: 100px;
 	}
 	.welcome {
 		margin-top: 100px;
 	}
+}
+
+// Temp Styling For Velocity Wdiget
+#velocity-status-widget {
+	top: initial;
+	bottom: 0px;
+	// display:none;
 }
