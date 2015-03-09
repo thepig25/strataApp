@@ -25,10 +25,6 @@
 				logLevel: 'silent'
 			};
 
-			world.wdio.getGhostDriver(options, function(browser) {
-				world.browser = browser;
-				browser.call(next);
-			});
 
 
 		};
