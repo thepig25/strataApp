@@ -12,18 +12,10 @@
 
 			helper.world.cucumber = Package['xolvio:cucumber'].cucumber;
 
-			Package['xolvio:webdriver'].wdio.getGhostDriver(function(browser) {
+			Package['xolvio:webdriver'].wdio.getChromeDriver(function(browser) {
 				helper.world.browser = browser;
 				browser.call(next);
 			});
-
-			var options = {
-				desiredCapabilities: {
-					browserName: 'PhantomJs'
-				},
-				port: 4444,
-				logLevel: 'silent'
-			};
 
 
 
