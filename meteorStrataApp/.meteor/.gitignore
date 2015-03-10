@@ -1,1 +1,4 @@
 local
+
+#ignore files
+*.png
