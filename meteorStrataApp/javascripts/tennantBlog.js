@@ -1,4 +1,4 @@
-/*global Meteor, Template, BlogPosts, Session, Accounts*/
+/*global Meteor, Template, BlogPosts*/
 
 BlogPosts = new Mongo.Collection('blogPosts');
 
@@ -65,7 +65,7 @@ Meteor.methods({
 	deletePost: function(postId) {
 
 		var post = BlogPosts.findOne(postId);
-		if ((post.private && task.owner !== Meteor.userId()) || post.owner !== Meteor.userId() ) {
+		if ((post.private && post.owner !== Meteor.userId()) || post.owner !== Meteor.userId() ) {
 			// If the task is private, make sure only the owner can delete it
 			throw new Meteor.Error('not-authorized');
 		} else {
