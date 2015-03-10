@@ -1,4 +1,6 @@
+#ignore folder
 local
 
 #ignore files
 *.png
+
