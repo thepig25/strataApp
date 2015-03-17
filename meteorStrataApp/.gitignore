@@ -1,0 +1,5 @@
+#ignore files
+*.png
+
+# Mac OS X
+*.DS_Store

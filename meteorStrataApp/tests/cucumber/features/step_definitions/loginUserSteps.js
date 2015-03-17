@@ -8,15 +8,29 @@
 
 		var helper = this;
 
-		this.Then(/^I click on the signin button and sign in$/, function(callback) {
+		this.Then(/^I login from a mobile$/, function(callback) {
 			helper.world.browser
+			.waitFor('.navbar-toggle',100)
+			.click('.navbar-toggle')
 			.waitFor('#login-sign-in-link',500)
 			.click('#login-sign-in-link')
 			.click('#login-username')
 			.setValue('#login-username','testuser')
 			.setValue('#login-password', 'password')
 			.click('#login-buttons-password')
-			.waitFor('.new-task',500)
+			.call(callback);
+
+
+		});
+
+		this.Then(/^I login from a desktop$/, function(callback) {
+			helper.world.browser
+			.waitFor('#login-sign-in-link',100)
+			.click('#login-sign-in-link')
+			.click('#login-username')
+			.setValue('#login-username','testuser')
+			.setValue('#login-password', 'password')
+			.click('#login-buttons-password')
 			.call(callback);
 
 
