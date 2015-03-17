@@ -1,8 +1,12 @@
 <template name="post">
-	<li class="">
-		<button class="delete">&times;</button>
-
-
-		<span class="text"><strong>{{username}}</strong> - {{text}}</span>
-	</li>
+		<div class="blogPostRow">
+			<h4 class="blogPostUser">
+				{{username}}
+			</h4>
+			<h5 class="blogPostValue">
+				{{text}}
+			</h5>
+		</div>
+		<button class="delete">Delete Post &times;</button>
+		<hr>
 </template>

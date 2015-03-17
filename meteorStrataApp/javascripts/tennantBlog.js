@@ -17,7 +17,7 @@ if (Meteor.isClient) {
 	});
 
 	Template.tenantBlog.events({
-		'submit .new-task': function(event) {
+		'submit .newBlogPostForm': function(event) {
 			// This function is called when the new task form is submitted
 
 			var text = event.target.text.value;
