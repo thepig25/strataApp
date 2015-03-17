@@ -12,7 +12,7 @@
 			helper.world.browser
 			.waitFor('.navbar-toggle',100)
 			.click('.navbar-toggle')
-			.waitFor('#login-sign-in-link',500)
+			.waitFor('#login-sign-in-link',100)
 			.click('#login-sign-in-link')
 			.click('#login-username')
 			.setValue('#login-username','testuser')

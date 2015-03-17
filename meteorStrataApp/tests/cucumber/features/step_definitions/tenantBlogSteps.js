@@ -23,7 +23,7 @@
 
 		this.Then(/^I should see a form for new blog posts with a class of "([^"]*)"$/, function(expectedForm, next) {
 			helper.world.browser
-			.waitFor('.newBlogPostForm',500)
+			.waitFor('.newBlogPostForm',200)
 			.isExisting(expectedForm, function(err, isExisting) {
 				if (!isExisting) {
 					next.fail('The Element ' + expectedForm + ' is not existing on the page');
