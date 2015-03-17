@@ -37,7 +37,7 @@
 
 		this.When(/I enter a post in the textarea with a class of "([^"]*)"$/, function(className, next) {
 			helper.world.browser
-			.waitFor(className,100)
+			.waitFor(className,200)
 			.setValue(className,'A new Test Post')
 			.call(next);
 
@@ -78,7 +78,7 @@
 
 		this.When(/^I click on the delete post button$/, function(next) {
 			helper.world.browser
-			.waitFor('.newBlogPostForm',100)
+			.waitFor('.newBlogPostForm',200)
 			.click('.delete')
 			.call(next);
 
