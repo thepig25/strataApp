@@ -6,6 +6,7 @@ Feature: Strata App Tennant Blog Page
 Background: Initial State
 	Given I am on the Blog Page
 	When I navigate to "tenantBlog"
+	Then I am signed out on mobile
 	Then I login from a mobile
 
 Scenario: Initial State Mobile
