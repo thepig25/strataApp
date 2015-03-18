@@ -12,7 +12,7 @@
 
 			helper.world.cucumber = Package['xolvio:cucumber'].cucumber;
 
-			Package['xolvio:webdriver'].wdio.getChromeDriver(function(browser) {
+			Package['xolvio:webdriver'].wdio.getGhostDriver(function(browser) {
 				helper.world.browser = browser;
 				browser.call(next);
 			});
