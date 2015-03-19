@@ -14,7 +14,7 @@ Router.map(function() {
 
 	this.route('todo', {
 		path: '/todo',
-		layoutTemplate: ''
+		layoutTemplate: 'baseLayout'
 	});
 
 	this.route('tenantBlog', {
