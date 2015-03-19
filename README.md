@@ -1,6 +1,18 @@
 # strataApp
-## Strata Managment App
-BDD Approache adopted using cucumber js and webdriver.io
+## Testing
+An application to manage Strata Properites and commmunicate with tennants. 
+
+## Testing
+BDD using cucumber.js and webdriver.io
+TDD using jasmine
+
+### Running the app
+ * Hack for now to set port number to allow jasmine and cucumber tests to run concurently
+```
+ $ JASMINE_MIRROR_PORT=5050 meteor
+ Open 
+ http://localhost:3000
+ ```
 
 ### Technology
 * Meteor
@@ -14,13 +26,17 @@ BDD Approache adopted using cucumber js and webdriver.io
  * accounts-facebook
 *  Sass, Twitter Bootstrap for styling
 * For Testing
- * xolvio:cucumber
-   https://github.com/xolvio/meteor-cucumbercu
-   https://cukes.info/
- * velocity:html-reporter
-   https://github.com/meteor-velocity/html-reporter
- * xolvio:webdriver
-   http://webdriver.io/
+ * Behavioural/Integration
+  * xolvio:cucumber
+    https://github.com/xolvio/meteor-cucumbercu
+    https://cukes.info/
+  * velocity:html-reporter
+    https://github.com/meteor-velocity/html-reporter
+  * xolvio:webdriver
+    http://webdriver.io/
+* Unit Testing
+ * Jasmine
+  * http://jasmine.github.io/edge/introduction.html
 
 
 
