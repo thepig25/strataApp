@@ -1,4 +1,4 @@
-# Strata App
+# Strata Property App
 ## Details
 An application to manage Strata Properites and commmunicate with tennants. 
 
