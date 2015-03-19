@@ -16,4 +16,5 @@ xolvio:cucumber
 velocity:html-reporter
 xolvio:webdriver
 velocity:console-reporter
-nucleuside:live-update
+coffeescript
+sanjo:jasmine
