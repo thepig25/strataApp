@@ -8,6 +8,7 @@ TDD using jasmine
 
 ### Running the app
  * Hack for now to set port number to allow jasmine and cucumber tests to run concurently
+ * There is a Meteor Github issue raised to fix this and use npm freeport
 
 ```
  $ JASMINE_MIRROR_PORT=5050 meteor
