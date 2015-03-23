@@ -19,3 +19,5 @@ velocity:console-reporter
 coffeescript
 sanjo:jasmine
 alanning:roles
+accounts-base
+mizzao:user-status
