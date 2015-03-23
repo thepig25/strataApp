@@ -18,3 +18,4 @@ xolvio:webdriver
 velocity:console-reporter
 coffeescript
 sanjo:jasmine
+alanning:roles
