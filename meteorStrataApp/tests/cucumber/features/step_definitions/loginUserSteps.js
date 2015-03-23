@@ -28,7 +28,7 @@
 
 		this.Then(/^I login from a mobile$/, function(callback) {
 			helper.world.browser
-				.waitFor('#login-sign-in-link',500)
+				.waitFor('#login-sign-in-link',600)
 				.click('#login-sign-in-link')
 				.waitFor('#login-username', 100)
 				.click('#login-username')
