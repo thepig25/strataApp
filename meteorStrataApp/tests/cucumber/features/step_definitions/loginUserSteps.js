@@ -16,7 +16,7 @@
 
 					} else {
 							this.click('#login-name-link')
-							.waitFor('#login-buttons-logout', 200)
+							.waitFor('#login-buttons-logout', 300)
 							.click('#login-buttons-logout')
 							.call(callback);
 					}
@@ -28,7 +28,7 @@
 
 		this.Then(/^I login from a mobile$/, function(callback) {
 			helper.world.browser
-				.waitFor('#login-sign-in-link', 1000)
+				.waitFor('#login-sign-in-link',500)
 				.click('#login-sign-in-link')
 				.waitFor('#login-username', 100)
 				.click('#login-username')
@@ -42,7 +42,7 @@
 
 		this.Then(/^I login from a desktop$/, function(callback) {
 			helper.world.browser
-				.waitFor('#login-sign-in-link', 1000)
+				.waitFor('#login-sign-in-link', 500)
 				.click('#login-sign-in-link')
 				.click('#login-username')
 				.setValue('#login-username', 'testuser')

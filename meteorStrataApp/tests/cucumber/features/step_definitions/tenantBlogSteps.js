@@ -23,7 +23,7 @@
 
 		this.Then(/^I should see a form for new blog posts with a class of "([^"]*)"$/, function(expectedForm, next) {
 			helper.world.browser
-			.waitFor('.newBlogPostForm',400)
+			.waitFor('.newBlogPostForm',600)
 			.isExisting(expectedForm, function(err, isExisting) {
 				if (!isExisting) {
 					next.fail('The Element ' + expectedForm + ' is not existing on the page');
@@ -37,7 +37,7 @@
 
 		this.When(/I enter a post in the textarea with a class of "([^"]*)"$/, function(className, next) {
 			helper.world.browser
-			.waitFor(className,400)
+			.waitFor(className,600)
 			.setValue(className,'A new Test Post')
 			.call(next);
 
@@ -52,7 +52,7 @@
 
 		this.Then(/The blog post value should be "([^"]*)"$/, function(blogValue, next) {
 			helper.world.browser
-			.waitFor('.newBlogPostForm',100)
+			.waitFor('.newBlogPostForm',600)
 			.getText('.blogPostValue', function(error, actualValue) {
 				if (actualValue !== blogValue) {
 					next.fail('The Blog post value' + actualValue + ' did not match ' + blogValue);
@@ -65,7 +65,7 @@
 
 		this.Then(/The blog post user should be "([^"]*)"$/, function(blogUser, next) {
 			helper.world.browser
-			.waitFor('.newBlogPostForm',300)
+			.waitFor('.newBlogPostForm',600)
 			.getText('.blogPostUser', function(error, actualUser) {
 				if (actualUser !== blogUser) {
 					next.fail('The Blog post value' + actualUser + ' did not match ' + blogUser);
@@ -78,7 +78,7 @@
 
 		this.When(/^I click on the delete post button$/, function(next) {
 			helper.world.browser
-			.waitFor('.newBlogPostForm',400)
+			.waitFor('.newBlogPostForm',600)
 			.click('.delete')
 			.call(next);
 
