@@ -21,4 +21,9 @@ Router.map(function() {
 		path: '/tenantBlog',
 		layoutTemplate: 'baseLayout'
 	});
+
+	this.route('blockChat', {
+		path: '/blockChat',
+		layoutTemplate: 'baseLayout'
+	});
 });

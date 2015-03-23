@@ -20,6 +20,7 @@
 							this.click('#login-name-link')
 							.waitFor('#login-buttons-logout', 100)
 							.click('#login-buttons-logout')
+							.click('.navbar-toggle')
 							.call(callback);
 					}
 
@@ -37,6 +38,7 @@
 				.setValue('#login-username', 'testuser')
 				.setValue('#login-password', 'password')
 				.click('#login-buttons-password')
+				.click('.navbar-toggle')
 				.call(callback);
 
 
