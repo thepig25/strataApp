@@ -10,8 +10,12 @@
 			var world = helper.world;
 			var next = arguments[arguments.length - 1];
 			world.browser.
-			init().
-			call(next);
+			init()
+			.setViewportSize({
+				width: 1280,
+				height: 1024
+			})
+			.call(next);
 		});
 
 		this.Before('@mobile', function(scenario, callback) {

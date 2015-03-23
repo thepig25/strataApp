@@ -1,22 +1,24 @@
 <template name="blockChat">
-    <div class="blockChat">
-    	 <div id="wrapper">
-	        <div id="sidebar-wrapper">
-	            <ul class="sidebar-nav onlUsers">
-	                <li class="sidebar-brand">
-	                    <a href="#">
-	                    Online Users
-	                </a>
-	                </li>
-	                {{#each onlusr}}
-	                <li class="user"><a href='#'>{{username}}</a></li>
-	                {{/each}}
-	            </ul>
-	        </div>
-	         <div id="page-content-wrapper">
-	        	{{> input }}
-	        	{{> messages }}
-	        </div>
-	    </div>
+	<script>
+	</script>
+	<div class="blockChat">
+		<div id="wrapper">
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav onlUsers">
+					<li class="sidebar-brand">
+						<a href="#">
+						Online Users (Click one to Chat)
+					</a>
+					</li>
+					{{#each onlusr}}
+					<li class="user"><a href='#'>{{username}}</a></li>
+					{{/each}}
+				</ul>
+			</div>
+			<div id="page-content-wrapper">
+				{{> input }}
+				{{> messages }}
+			</div>
+		</div>
 	</div>
 </template>
