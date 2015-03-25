@@ -86,3 +86,7 @@ Template.input.events = {
 	}
 };
 
+if (Meteor.isCordova) {
+
+}
+
