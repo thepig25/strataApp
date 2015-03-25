@@ -1,5 +1,20 @@
 <template name="messages">
-  {{#each msgs}}
-    <strong>{{name}}:</strong> {{text}}<br>
-  {{/each}}
+    {{#each msgs}}
+    <br>
+    <li class="media">
+        <div class="media-body">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object img-circle " src="assets/img/user.gif">
+                </a>
+                <div class="media-body">
+                   	{{text}}
+                    <br>
+                    <small class="text-muted">{{name}}</small>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
 </template>
