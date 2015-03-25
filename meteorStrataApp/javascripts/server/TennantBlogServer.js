@@ -1,3 +1,5 @@
+/*global Meteor, BlogPosts */
+
 Meteor.methods({
 	addPost: function(text) {
 		// Make sure the user is logged in before inserting a task
