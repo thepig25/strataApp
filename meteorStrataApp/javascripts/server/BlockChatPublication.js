@@ -1,12 +1,15 @@
+/*global Meteor, ChatRooms*/
 
-Meteor.publish("chatrooms", function() {
+'use strict';
+
+Meteor.publish('chatrooms', function() {
 	return ChatRooms.find({});
 });
-Meteor.publish("onlusers", function() {
+Meteor.publish('onlusers', function() {
 	return Meteor.users.find({
-		"status.online": true
+		'status.online': true
 	}, {
 		username: 1
 	});
-})
+});
 

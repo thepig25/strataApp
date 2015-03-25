@@ -1,3 +1,7 @@
+/*global Meteor, ChatRooms*/
+
+'use strict';
+
 Meteor.startup(function(){
    ChatRooms.allow({
 		'insert':function(userId,doc){

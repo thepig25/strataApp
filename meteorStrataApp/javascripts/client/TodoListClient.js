@@ -1,7 +1,10 @@
-/*global Meteor, Template, Tasks, Session, Accounts*/
+/*global Meteor, Template, Deps, Session, Tasks, Accounts*/
+
+'use strict';
+
 Deps.autorun(function() {
 	Meteor.subscribe('tasks');
-})
+});
 
 
 Template.todo.helpers({
