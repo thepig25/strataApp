@@ -47,13 +47,18 @@ Template.messages.helpers({
 			_id: Session.get('roomid')
 		});
 
-		return result.messages;
+		if (result) {
+
+			return result.messages;
+		} else {
+			return;
+		}
 	}
 });
 
 Template.input.events = {
 	'keydown input#message': function(event) {
-		if (event.which == 13) {
+		if (event.which === 13) {
 			if (Meteor.user()) {
 				var name = Meteor.user().username;
 				var message = document.getElementById('message');
