@@ -1,5 +1,6 @@
 /*global Router*/
 
+'use strict';
 
 Router.map(function() {
 	this.route('welcome', {

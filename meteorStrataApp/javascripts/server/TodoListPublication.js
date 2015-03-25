@@ -1,3 +1,8 @@
+/*global Meteor, Tasks*/
+
+'use strict';
+
+
 Meteor.publish('tasks', function() {
 	return Tasks.find({
 		$or: [{

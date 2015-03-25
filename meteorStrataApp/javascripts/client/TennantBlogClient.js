@@ -1,5 +1,5 @@
 /*global Meteor, Template, BlogPosts, BlogPostService*/
-
+/*jshint -W020 */
 /**
  * Separate player logic into an own service singleton for better testability and reusability.
  * @type {{}}

@@ -1,8 +1,9 @@
-// This code only runs on the client
+/*global Deps, Meteor, Template, Session, ChatRooms, alert */
+'use strict';
 Deps.autorun(function() {
 	Meteor.subscribe('chatrooms');
 	Meteor.subscribe('onlusers');
-})
+});
 
 
 Template.blockChat.helpers({
@@ -78,5 +79,5 @@ Template.input.events = {
 
 		}
 	}
-}
+};
 
