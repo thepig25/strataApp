@@ -37,6 +37,31 @@ Template.blockChat.events({
 			});
 			Session.set('roomid', newRoom);
 		}
+	},
+	'click .sendChatMessage': function(event) {
+		if (Meteor.user()) {
+			var name = Meteor.user().username;
+			var message = document.getElementById('message');
+
+			if (message.value !== '') {
+				var de = ChatRooms.update({
+					'_id': Session.get('roomid')
+				}, {
+					$push: {
+						messages: {
+							name: name,
+							text: message.value,
+							createdAt: Date.now()
+						}
+					}
+				});
+				document.getElementById('message').value = '';
+				message.value = '';
+			}
+		} else {
+			alert('login to chat');
+		}
+
 	}
 
 });
@@ -86,7 +111,4 @@ Template.input.events = {
 	}
 };
 
-if (Meteor.isCordova) {
-
-}
 

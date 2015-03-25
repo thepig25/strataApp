@@ -1,23 +1,53 @@
 <template name="blockChat">
-	<script>
-	</script>
 	<div class="blockChat">
-		<div id="wrapper">
-			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav onlUsers">
-					<li class="sidebar-brand">
-						<a href="#">
-						Online Users (Click one to Chat)
-					</a>
-					</li>
-					{{#each onlusr}}
-					<li class="user"><a href='#'>{{username}}</a></li>
-					{{/each}}
-				</ul>
+		<div class="row " style="padding-top:40px;">
+			<h3 class="text-center">Block Chat</h3>
+			<br>
+			<br>
+			<div class="col-md-8">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						RECENT CHAT HISTORY
+					</div>
+					<div class="panel-body">
+						<ul class="media-list">
+							{{> messages }}
+						</ul>
+					</div>
+					<div class="panel-footer">
+						<div class="input-group">
+							{{> input }}
+							<span class="input-group-btn">
+							<a class="btn btn-info sendChatMessage" href='#'>SEND</a>
+					</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div id="page-content-wrapper">
-				{{> input }}
-				{{> messages }}
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						ONLINE USERS
+					</div>
+					<div class="panel-body">
+						<ul class="media-list">
+							{{#each onlusr}}
+							<li class="media">
+								<div class="media-body">
+									<div class="media">
+										<a class="pull-left" href="#">
+											<img class="media-object img-circle" style="max-height:40px;" src="assets/img/user.png">
+										</a>
+										<div class="media-body">
+											<h5 class="user"><a href='#'>{{username}}</a></h5>
+										</div>
+									</div>
+								</div>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
