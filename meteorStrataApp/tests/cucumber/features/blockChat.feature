@@ -10,5 +10,5 @@ Background: Initial State
 	Then I login from a mobile
 
 Scenario: Initial State of Chat Page
-	Then I should see a input for new chat messages with an id of "#message"
+	Then I should see a input for new chat messages with an id of ".sendChatMessage"
 
