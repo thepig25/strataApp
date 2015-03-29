@@ -48,6 +48,29 @@
 						</ul>
 					</div>
 				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						OFFLINE USERS
+					</div>
+					<div class="panel-body">
+						<ul class="media-list">
+							{{#each offlineUsers}}
+							<li class="media">
+								<div class="media-body">
+									<div class="media">
+										<a class="pull-left" href="#">
+											<img class="media-object img-circle" style="max-height:40px;" src="assets/img/user.png">
+										</a>
+										<div class="media-body">
+											<h5 class="user"><a href='#'>{{username}}</a>(Last Online: {{status.lastLogin.date}})</h5>
+										</div>
+									</div>
+								</div>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

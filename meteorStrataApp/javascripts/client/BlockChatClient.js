@@ -3,6 +3,7 @@
 Deps.autorun(function() {
 	Meteor.subscribe('chatrooms');
 	Meteor.subscribe('onlusers');
+	Meteor.subscribe('offlineUsers');
 });
 
 
@@ -15,6 +16,14 @@ Template.blockChat.helpers({
 			}
 		});
 	},
+	'offlineUsers': function() {
+		return Meteor.users.find({
+			'status.online': false,
+			_id: {
+				$ne: Meteor.userId()
+			}
+		});
+	}
 
 });
 
