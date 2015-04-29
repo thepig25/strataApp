@@ -78,10 +78,6 @@ Template.task.events({
 	}
 });
 
-Accounts.ui.config({
-	passwordSignupFields: 'USERNAME_ONLY'
-});
-
 Template.task.helpers({
 	isOwner: function() {
 		return this.owner === Meteor.userId();

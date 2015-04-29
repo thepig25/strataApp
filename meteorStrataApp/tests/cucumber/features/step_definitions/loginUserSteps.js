@@ -30,9 +30,9 @@
 			helper.world.browser
 				.waitFor('#login-sign-in-link',600)
 				.click('#login-sign-in-link')
-				.waitFor('#login-username', 100)
-				.click('#login-username')
-				.setValue('#login-username', 'testuser')
+				.waitFor('#login-username-or-email', 500)
+				.click('#login-username-or-email')
+				.setValue('#login-username-or-email', 'testuser')
 				.setValue('#login-password', 'password')
 				.click('#login-buttons-password')
 				.call(callback);
@@ -44,8 +44,8 @@
 			helper.world.browser
 				.waitFor('#login-sign-in-link', 500)
 				.click('#login-sign-in-link')
-				.click('#login-username')
-				.setValue('#login-username', 'testuser')
+				.click('#login-username-or-email')
+				.setValue('#login-username-or-email', 'testuser')
 				.setValue('#login-password', 'password')
 				.click('#login-buttons-password')
 				.call(callback);
